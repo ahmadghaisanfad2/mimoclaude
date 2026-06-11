@@ -56,7 +56,7 @@ mimoclaude --help
 MiMoClaude configures Claude Code with these Anthropic-compatible model variables:
 
 - main model: `mimo-v2.5-pro`
-- sonnet: `mimo-v2.5-pro`
+- sonnet: `mimo-v2.5`
 - opus: `mimo-v2.5-pro`
 - haiku/vision: `mimo-v2.5`
 

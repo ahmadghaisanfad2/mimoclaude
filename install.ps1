@@ -150,7 +150,7 @@ if ([string]::IsNullOrWhiteSpace($Config.MIMO_BASE_URL)) {
 $env:ANTHROPIC_BASE_URL = $Config.MIMO_BASE_URL
 $env:ANTHROPIC_AUTH_TOKEN = $Config.MIMO_API_KEY
 $env:ANTHROPIC_MODEL = "mimo-v2.5-pro"
-$env:ANTHROPIC_DEFAULT_SONNET_MODEL = "mimo-v2.5-pro"
+$env:ANTHROPIC_DEFAULT_SONNET_MODEL = "mimo-v2.5"
 $env:ANTHROPIC_DEFAULT_OPUS_MODEL = "mimo-v2.5-pro"
 $env:ANTHROPIC_DEFAULT_HAIKU_MODEL = "mimo-v2.5"
 
