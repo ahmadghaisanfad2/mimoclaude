@@ -11,6 +11,14 @@ TOKEN_PLAN_BASE_URL="https://token-plan-sgp.xiaomimimo.com/anthropic"
 echo "MiMoClaude installer"
 echo
 
+if [ ! -r /dev/tty ]; then
+  echo "Error: this installer needs an interactive terminal."
+  echo "Please run it from Terminal so it can securely ask for your API key."
+  exit 1
+fi
+
+exec 3</dev/tty
+
 if ! command -v claude >/dev/null 2>&1; then
   echo "Error: Claude Code was not found."
   echo "Please install Claude Code first, then run this installer again."
@@ -21,7 +29,7 @@ echo "Choose your MiMo API type:"
 echo "  1. Token Plan"
 echo "  2. API Pay-as-you-go"
 printf "Selection [1/2]: "
-read -r MIMO_API_TYPE_CHOICE
+read -r MIMO_API_TYPE_CHOICE <&3
 
 case "$MIMO_API_TYPE_CHOICE" in
   1|"")
@@ -34,7 +42,7 @@ case "$MIMO_API_TYPE_CHOICE" in
     echo "Paste your MiMo Anthropic-compatible API base URL."
     echo "Example format: https://example.com/anthropic"
     printf "Base URL: "
-    read -r MIMO_BASE_URL
+    read -r MIMO_BASE_URL <&3
 
     if [ -z "$MIMO_BASE_URL" ]; then
       echo "Error: base URL cannot be empty for API Pay-as-you-go."
@@ -55,7 +63,7 @@ else
   echo "API Pay-as-you-go keys may use a different prefix."
 fi
 printf "API key: "
-read -r -s MIMO_API_KEY
+read -r -s MIMO_API_KEY <&3
 echo
 
 if [ -z "$MIMO_API_KEY" ]; then
@@ -70,7 +78,7 @@ case "$MIMO_API_KEY" in
     if [ "$MIMO_API_TYPE" = "token-plan" ]; then
       echo "Warning: this Token Plan API key does not start with tp-."
       printf "Continue anyway? [y/N]: "
-      read -r CONTINUE_INSTALL
+      read -r CONTINUE_INSTALL <&3
       case "$CONTINUE_INSTALL" in
         y|Y|yes|YES)
           ;;
