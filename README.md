@@ -7,7 +7,7 @@ MiMoClaude does not replace or modify your normal `claude` command.
 ## Install on macOS or Linux
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/USERNAME/mimoclaude/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ahmadghaisanfad2/mimoclaude/main/install.sh | bash
 ```
 
 ## Install on Windows
@@ -15,7 +15,7 @@ curl -fsSL https://raw.githubusercontent.com/USERNAME/mimoclaude/main/install.sh
 Run this in PowerShell:
 
 ```powershell
-iwr -useb https://raw.githubusercontent.com/USERNAME/mimoclaude/main/install.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/ahmadghaisanfad2/mimoclaude/main/install.ps1 | iex
 ```
 
 The installer will ask which MiMo API type you use, then ask for your MiMo API key and store the config locally at:
@@ -65,13 +65,13 @@ MiMoClaude configures Claude Code with these Anthropic-compatible model variable
 macOS or Linux:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/USERNAME/mimoclaude/main/uninstall.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ahmadghaisanfad2/mimoclaude/main/uninstall.sh | bash
 ```
 
 Windows PowerShell:
 
 ```powershell
-iwr -useb https://raw.githubusercontent.com/USERNAME/mimoclaude/main/uninstall.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/ahmadghaisanfad2/mimoclaude/main/uninstall.ps1 | iex
 ```
 
 The uninstaller removes:
