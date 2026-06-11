@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/mimoclaude-banner.png" alt="MiMoClaude - Run Claude Code with Xiaomi MiMo Token Plan">
+</p>
+
 # MiMoClaude
 
 MiMoClaude is a small open-source installer that creates a separate `mimoclaude` command for Claude Code. It runs the normal `claude` command with Anthropic-compatible environment variables for Xiaomi MiMo.
